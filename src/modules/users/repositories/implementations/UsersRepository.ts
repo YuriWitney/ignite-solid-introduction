@@ -46,7 +46,7 @@ class UsersRepository implements IUsersRepository {
   }
 
   list(): User[] {
-    return null
+    return this.users
   }
 }
 
