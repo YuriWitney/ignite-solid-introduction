@@ -4,5 +4,47 @@
         "title": "Solid Introduction",
         "description": "An api to demonstrate the concepts of SOLID, and validate nodejs route challenge 4",
         "version": "1.0.0"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "Get users",
+                "description": "Get all users if the requester is admin",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "user_id",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "required": true,
+                        "description": "ID of the user that sent the request"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {"type": "string"},
+                                            "admin": {"type": "boolean"},
+                                            "email": {"type": "string"},
+                                            "created_at": {"type": "string"},
+                                            "updated_at": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
