@@ -42,7 +42,24 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "Client specified a non existing user in header.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error": {"type": "string"}
+                                    }  
+                                },
+                                "example": {
+                                    "error": "User Not Found!"
+                                }
+                            }
+                        }
                     }
+
                 }
             }
         }
