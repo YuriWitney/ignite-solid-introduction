@@ -1,0 +1,8 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Solid Introduction",
+        "description": "An api to demonstrate the concepts of SOLID, and validate nodejs route challenge 4",
+        "version": "1.0.0"
+    }
+}
