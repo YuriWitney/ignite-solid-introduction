@@ -44,7 +44,7 @@
                         }
                     },
                     "400": {
-                        "description": "Client specified a non existing user in header.",
+                        "description": "Client specified an invalid params on header.",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -53,9 +53,18 @@
                                         "error": {"type": "string"}
                                     }  
                                 },
-                                "example": {
-                                    "error": "User Not Found!"
-                                }
+                                "examples": {
+                                    "User not found": {
+                                        "value": {
+                                            "error": "User Not Found!"
+                                        }
+                                    },
+                                    "Access forbidden": {
+                                        "value": {
+                                            "error": "Access Forbidden!"
+                                        }
+                                    }
+                                }   
                             }
                         }
                     }
