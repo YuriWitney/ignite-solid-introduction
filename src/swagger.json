@@ -8,6 +8,7 @@
     "paths": {
         "/users": {
             "get": {
+                "tags": ["Users"],
                 "summary": "Get users",
                 "description": "Get all users if the requester is admin",
                 "parameters": [
@@ -71,6 +72,35 @@
                         }
                     }
 
+                }
+            },
+            "post": {
+                "tags": ["Users"],
+                "summary":"Post users",
+                "description": "Post a single user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Fulano de Tal",
+                                "email": "fulano@email.com"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    
                 }
             }
         }
