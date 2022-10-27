@@ -158,6 +158,14 @@
                                         "created_at": {"type": "string"},
                                         "updated_at": {"type": "string"}
                                     }
+                                },
+                                "example": {
+                                    "id": "SOME_UUID",
+                                    "name": "Fulano de Tal",
+                                    "admin": false,
+                                    "email": "fulano@email.com",
+                                    "created_at": "SOME_DATE",
+                                    "updated_at": "SOME_DATE"
                                 }
                             }
                         }
