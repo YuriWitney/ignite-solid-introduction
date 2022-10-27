@@ -190,6 +190,25 @@
                     }
                 }
             }
+        },
+        "/users/:user_id/admin": {
+            "patch": {
+                "tags": ["Users"],
+                "summary": "Update user type",
+                "description": "Change a single user to a admin",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_id",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true,
+                        "description": "ID of the user that data will be displayed"
+                    }
+                ]
+
+            }
         }
     }
 }
