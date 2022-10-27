@@ -123,6 +123,24 @@
                   }
                 }
             }
+        },
+        "/users/:user_id": {
+            "get": {
+                "tags": ["Users"],
+                "summary": "get a single user",
+                "description": "get a single user by parameter",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "user_id",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true,
+                        "description": "ID of the user that data will be displayed"
+                    }
+                ]
+            }
         }
     }
 }
