@@ -57,12 +57,14 @@
                                     "User not found": {
                                         "value": {
                                             "error": "User Not Found!"
-                                        }
+                                        },
+                                        "summary": "When user dont exists"
                                     },
                                     "Access forbidden": {
                                         "value": {
                                             "error": "Access Forbidden!"
-                                        }
+                                        },
+                                        "summary": "When user dont have permission"
                                     }
                                 }   
                             }
