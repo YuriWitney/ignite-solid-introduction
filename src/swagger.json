@@ -206,7 +206,38 @@
                         "required": true,
                         "description": "ID of the user that data will be displayed"
                     }
-                ]
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "format": "uuid"
+                                        },
+                                        "name": {"type": "string"},
+                                        "admin": {"type": "boolean"},
+                                        "email": {"type": "string"},
+                                        "created_at": {"type": "string"},
+                                        "updated_at": {"type": "string"}
+                                    }
+                                },
+                                "example": {
+                                    "id": "SOME_UUID",
+                                    "name": "Fulano de Tal",
+                                    "admin": true,
+                                    "email": "fulano@email.com",
+                                    "created_at": "SOME_DATE",
+                                    "updated_at": "SOME_DATE"
+                                }
+                            }
+                        }
+                    }
+                }
 
             }
         }
