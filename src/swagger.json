@@ -236,6 +236,24 @@
                                 }
                             }
                         }
+                    },
+                    "404": {
+                        "description": "User not found. The specified user could not be found.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "example": {
+                                    "error": "User Not Found!"
+                                }
+                            }
+                        }
                     }
                 }
 
